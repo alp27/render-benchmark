@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-lazy-one',
   standalone: true,
-  imports: [CommonModule], // ✅ CommonModule eklendi
+  imports: [CommonModule], 
   template: `
     <div class="lazy-component" style="border: 2px solid blue; padding: 20px; margin: 10px;">
       <h3>🔥 Lazy Component 1</h3>

@@ -6,7 +6,7 @@ import { RenderStrategy } from '../models';
   selector: '[appDepthThrottle]'
 })
 export class DepthThrottleDirective {
-  @Input() appDepthThrottle: RenderStrategy = RenderStrategy.DEFAULT; // ✅ Tek input
+  @Input() appDepthThrottle: RenderStrategy = RenderStrategy.DEFAULT; 
 
   constructor(
     private el: ElementRef,
@@ -16,7 +16,7 @@ export class DepthThrottleDirective {
   @HostListener('click') onClick() {
     let color: string;
     
-    switch(this.appDepthThrottle) {  // ✅ appDepthThrottle kullan
+    switch(this.appDepthThrottle) { 
       case RenderStrategy.DEFAULT:
         color = '#ff4444';
         break;

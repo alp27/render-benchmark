@@ -14,7 +14,6 @@ export class NoTrackByComponent {
   items = Array.from({ length: 500 }, (_, i) => ({ id: i, name: 'Eleman ' + i }));
 
   shuffle() {
-    // Liste sırasını karıştırarak Angular’a değişiklik sinyali gönderiyoruz
     this.items = [...this.items].sort(() => Math.random() - 0.5);
   }
 }

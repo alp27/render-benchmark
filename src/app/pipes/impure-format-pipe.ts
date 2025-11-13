@@ -11,7 +11,6 @@ export class ImpureFormatPipe implements PipeTransform {
     
     if (value == null) return 'Değer yok';
     
-    // Basit işlem - ağır işlem kaldırıldı
     const stringValue = value.toString();
     
     switch (type) {

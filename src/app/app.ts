@@ -208,7 +208,6 @@ export class AppComponent {
   result: number | null = null;
 
   runTest() {
-    // Özel testler için ölçüm yapma
     if (this.selectedTest === 'lazy' || this.selectedTest === 'detach' || this.selectedTest === 'depthThrottling') {
       return;
     }
@@ -222,13 +221,11 @@ export class AppComponent {
       this.arr = Array.from({ length: this.count }, (_, i) => i);
       this.show = true;
 
-      // Ölçüm süresi
       setTimeout(() => {
         const end = performance.now();
         this.result = +(end - start).toFixed(2);
         console.log('Render süresi:', this.selectedTest, this.result, 'ms');
         
-        // Performans uyarıları
         if (this.result > 1000) {
           console.warn('⚠️  Performans uyarısı: Render süresi 1 saniyeden fazla!');
         } else if (this.result > 500) {
@@ -240,7 +237,6 @@ export class AppComponent {
     });
   }
 
-  // Sayfa yüklendiğinde bazı test bilgilerini göster
   ngOnInit() {
     console.log('🎯 Angular Performans Test Uygulaması Başlatıldı');
     console.log('📊 Mevcut Testler:');
